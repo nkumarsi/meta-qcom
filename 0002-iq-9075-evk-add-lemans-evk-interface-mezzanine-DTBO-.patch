@@ -1,0 +1,29 @@
+From 63e7b3cab199af6701a8e39defcf6018c9aac584 Mon Sep 17 00:00:00 2001
+From: Nirmesh Kumar Singh <nirmesh.singh@oss.qualcomm.com>
+Date: Tue, 10 Mar 2026 20:48:06 +0530
+Subject: [PATCH 2/2] iq-9075-evk: add lemans-evk interface mezzanine DTBO to
+ KERNEL_DEVICETREE
+
+Include the lemans-evk-ifp-mezzanine.dtbo overlay in the
+KERNEL_DEVICETREE list for the iq-9075-evk machine.
+
+Signed-off-by: Nirmesh Kumar Singh <nirmesh.singh@oss.qualcomm.com>
+---
+ conf/machine/iq-9075-evk.conf | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/conf/machine/iq-9075-evk.conf b/conf/machine/iq-9075-evk.conf
+index 0cff58e1..28b89738 100644
+--- a/conf/machine/iq-9075-evk.conf
++++ b/conf/machine/iq-9075-evk.conf
+@@ -9,6 +9,7 @@ MACHINE_FEATURES += "efi pci tpm2"
+ KERNEL_DEVICETREE ?= " \
+                       qcom/lemans-evk.dtb \
+                       qcom/lemans-evk-camera-csi1-imx577.dtbo \
++                      qcom/lemans-evk-ifp-mezzanine.dtbo \
+                       "
+ 
+ # These DTs are not upstreamed and currently exist only in linux-qcom kernels
+-- 
+2.34.1
+
